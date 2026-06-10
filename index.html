@@ -206,24 +206,21 @@
     <p>Select a subject to begin your 50-question practice set.</p>
     
     <div class="subject-grid">
-      <div class="subject-card" onclick="startQuiz('Biology')">
-        <h3>Biology</h3>
+      <div class="subject-card" onclick="startQuiz('GeneralBotany')">
+        <h3>General Botany</h3>
       </div>
-      <div class="subject-card" onclick="startQuiz('Chemistry')">
-        <h3>Chemistry</h3>
+      <div class="subject-card" onclick="startQuiz('GeneralZoology')">
+        <h3>General Zoology</h3>
       </div>
-      <div class="subject-card" onclick="startQuiz('Physics')">
+      <div class="subject-card" onclick="startQuiz('ChemicalBiology1')">
+        <h3>Chemical Biology 1</h3>
+      </div>
+      <div class="subject-card" onclick="startQuiz('Genetics')">
+        <h3>Genetics</h3>
+      </div>
+      <div class="subject-card" onclick="startQuiz('Invertebrate Zoology')">
         <h3>Physics</h3>
       </div>
-      <div class="subject-card" onclick="startQuiz('Physics')">
-        <h3>Physics</h3>
-      </div>
-      <div class="subject-card" onclick="startQuiz('Physics')">
-        <h3>Physics</h3>
-      </div>
-      <div class="subject-card" onclick="startQuiz('Physics')">
-        <h3>Physics</h3>
-      </div>    
     </div>
   </div>
 
@@ -253,45 +250,45 @@
     // --- MASSIVE QUESTION BANK ---
     // Added a "subject" property to every question
     const questionBank = [
-      // BIOLOGY
+      // GENERAL BOTANY
       {
-        subject: "Biology",
+        subject: "GeneralBotany",
         question: "Which organelle is the site of cellular respiration in eukaryotic cells?",
         options: ["Chloroplast", "Mitochondria", "Nucleus", "Ribosome"],
         correct: "Mitochondria"
       },
       {
-        subject: "Biology",
+        subject: "GeneralBotany",
         question: "In DNA replication, which enzyme is responsible for unwinding the double helix?",
         options: ["DNA Polymerase", "Ligase", "Helicase", "Primase"],
         correct: "Helicase"
       },
-      // CHEMISTRY
+      // GENERAL ZOOLOGY
       {
-        subject: "Chemistry",
-        question: "What is the oxidation state of Oxygen in most peroxides (like H2O2)?",
-        options: ["-2", "-1", "0", "+1"],
-        correct: "-1"
-      },
-      {
-        subject: "Chemistry",
-        question: "Which gas law states that at constant temperature, pressure is inversely proportional to volume?",
-        options: ["Charles's Law", "Boyle's Law", "Gay-Lussac's Law", "Avogadro's Law"],
-        correct: "Boyle's Law"
-      },
-      // PHYSICS
-      {
-        subject: "Physics",
+        subject: "GeneralZoology",
         question: "What is the unit of power in the International System of Units (SI)?",
         options: ["Joule", "Newton", "Watt", "Pascal"],
         correct: "Watt"
       },
       {
-        subject: "Physics",
+        subject: "GeneralZoology",
         question: "According to Newton's Second Law, force is equal to mass multiplied by what?",
         options: ["Velocity", "Acceleration", "Displacement", "Time"],
         correct: "Acceleration"
-      }
+      },
+      // CHEMICAL BIOLOGY 1
+      {
+        subject: "ChemicalBiology1",
+        question: "What is the oxidation state of Oxygen in most peroxides (like H2O2)?",
+        options: ["-2", "-1", "0", "+1"],
+        correct: "-1"
+      },
+      {
+        subject: "ChemicalBiology1",
+        question: "Which gas law states that at constant temperature, pressure is inversely proportional to volume?",
+        options: ["Charles's Law", "Boyle's Law", "Gay-Lussac's Law", "Avogadro's Law"],
+        correct: "Boyle's Law"
+      },
     ];
 
     let activeQuestions = [];
