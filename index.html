@@ -205,7 +205,10 @@
     <h1>Reviewer Generator</h1>
     <p>Select a subject to begin your 50-question practice set.</p>
     
-    <div class="subject-grid">
+    <div class="subject-grid
+      <div class="subject-card" onclick="startQuiz('BBIO102A')">
+        <h3>BBIO102A</h3>
+      </div>
       <div class="subject-card" onclick="startQuiz('General Botany')">
         <h3>General Botany</h3>
       </div>
@@ -219,7 +222,7 @@
         <h3>Genetics</h3>
       </div>
       <div class="subject-card" onclick="startQuiz('Invertebrate Zoology')">
-        <h3>Physics</h3>
+        <h3>Invertebrate Zoology</h3>
       </div>
     </div>
   </div>
@@ -250,6 +253,920 @@
     // --- MASSIVE QUESTION BANK ---
     // Added a "subject" property to every question
     const questionBank = [
+      // BBIO102A
+      {
+        "subject": "BBIO102A",
+        "question": "What is the primary function of the plasma membrane in animal cells?",
+        "options": [
+          "Serves as the exclusive site of ATP synthesis via oxidative phosphorylation",
+          "Acts as a thin outer protective layer that controls what enters and leaves the cell",
+          "Synthesizes polypeptides and packages them into secretory vesicles",
+          "Directs the movement of chromosomes during mitotic cell division"
+        ],
+        "correct": "Acts as a thin outer protective layer that controls what enters and leaves the cell"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "How does the internal environment of a cell relate to its plasma membrane?",
+        "options": [
+          "The plasma membrane encloses the cell, establishing a distinct internal environment",
+          "The plasma membrane allows non-selective diffusion, ensuring the interior mirrors the external environment",
+          "The plasma membrane only encloses eukaryotic cells, leaving prokaryotic interiors open",
+          "The plasma membrane disintegrates during interphase to facilitate cytoplasmic mixing"
+        ],
+        "correct": "The plasma membrane encloses the cell, establishing a distinct internal environment"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Which organelle acts as the control center of the animal cell and houses genetic instructions?",
+        "options": [
+          "Centrosome",
+          "Nucleus",
+          "Golgi apparatus",
+          "Peroxisome"
+        ],
+        "correct": "Nucleus"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Which specific components are located within the animal cell nucleus?",
+        "options": [
+          "Chromatin and nucleolus",
+          "Centrioles and lysosomes",
+          "Microtubules and microvilli",
+          "Peroxisomes and endosomes"
+        ],
+        "correct": "Chromatin and nucleolus"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What is the structural and functional role of the cytoplasm?",
+        "options": [
+          "A rigid outer wall providing mechanical rigidity to somatic tissues",
+          "A jelly-like fluid where organelles float and numerous chemical reactions occur",
+          "A fibrous microtubule bundle designed strictly for cellular locomotion",
+          "A specialized secretory vacuole that stores hydrolytic digestive enzymes"
+        ],
+        "correct": "A jelly-like fluid where organelles float and numerous chemical reactions occur"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Which organelle is designated as the powerhouse of the cell due to its role in making energy (ATP) from food?",
+        "options": [
+          "Lysosome",
+          "Mitochondria",
+          "Peroxisome",
+          "Rough Endoplasmic Reticulum"
+        ],
+        "correct": "Mitochondria"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Where can ribosomes be located within an animal cell?",
+        "options": [
+          "Exclusively inside the lumen of the smooth endoplasmic reticulum",
+          "Floating freely in the cell or attached to the endoplasmic reticulum",
+          "Embedded within the lipid bilayer of the plasma membrane",
+          "Anchored exclusively inside peroxisomes and endosomes"
+        ],
+        "correct": "Floating freely in the cell or attached to the endoplasmic reticulum"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What is the direct biochemical function of ribosomes?",
+        "options": [
+          "Synthesis of cellular proteins",
+          "Degradation of hydrogen peroxide",
+          "Breakdown of cellular wastes",
+          "Lipid metabolism and drug detoxification"
+        ],
+        "correct": "Synthesis of cellular proteins"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What general morphological structure defines the endoplasmic reticulum (ER)?",
+        "options": [
+          "A bundle of nine peripheral microtubule doublets",
+          "A network of tubes that helps make and move proteins and fats",
+          "A non-membranous crystalline protein matrix",
+          "A solitary large central vacuole filled with cell sap"
+        ],
+        "correct": "A network of tubes that helps make and move proteins and fats"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Which characteristic specifically distinguishes the Rough Endoplasmic Reticulum from the Smooth Endoplasmic Reticulum?",
+        "options": [
+          "Rough ER contains ribosomes and functions in protein production",
+          "Rough ER synthesizes fats and neutralizes chemical toxins",
+          "Rough ER is found only in prokaryotic organisms",
+          "Rough ER lacks membrane-bound cisternae"
+        ],
+        "correct": "Rough ER contains ribosomes and functions in protein production"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What are the primary functional roles associated with the Smooth Endoplasmic Reticulum?",
+        "options": [
+          "Assembly of mitotic spindle fibers and chromosome sorting",
+          "Making fats and helping remove toxins",
+          "Synthesizing primary polypeptide chains via bound ribosomes",
+          "Packaging hydrolytic enzymes into secretory lysosomes"
+        ],
+        "correct": "Making fats and helping remove toxins"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Which organelle is responsible for packaging and shipping proteins and other materials to destinations inside or outside the cell?",
+        "options": [
+          "Golgi Apparatus",
+          "Endosome",
+          "Peroxisome",
+          "Nucleolus"
+        ],
+        "correct": "Golgi Apparatus"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What structures directly assist the Golgi apparatus in transporting materials?",
+        "options": [
+          "Golgi vesicles",
+          "Centriolar microtubules",
+          "Microvilli",
+          "Chromatin fibers"
+        ],
+        "correct": "Golgi vesicles"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What type of substances do lysosomes contain to carry out cellular breakdown?",
+        "options": [
+          "Enzymes that break down waste, old parts, or invading germs",
+          "High concentrations of ATP synthase and electron carriers",
+          "Neutral lipids and steroid hormones for export",
+          "Hydrogen peroxide generating oxidases"
+        ],
+        "correct": "Enzymes that break down waste, old parts, or invading germs"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Which target materials are systematically digested and broken down by lysosomes?",
+        "options": [
+          "Waste, old cell parts, and invading germs",
+          "Deoxyribonucleic acid strands during interphase replication",
+          "Lipids synthesized inside the smooth ER exclusively",
+          "Inorganic phosphate ions utilized during ATP condensation"
+        ],
+        "correct": "Waste, old cell parts, and invading germs"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What is the function of the cytoskeleton in an animal cell?",
+        "options": [
+          "A framework of proteins that gives the cell its shape and helps it move",
+          "A selectively permeable lipid barrier controlling osmolarity",
+          "A metabolic site dedicated solely to condensation reactions",
+          "A specialized nuclear domain that synthesizes transfer RNA"
+        ],
+        "correct": "A framework of proteins that gives the cell its shape and helps it move"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What dual role do microtubules perform within the animal cell?",
+        "options": [
+          "Help move organelles and support the cell's shape as part of the cytoskeleton",
+          "Produce ATP and store glycogen granules in the cytoplasm",
+          "Synthesize ribosomal subunits and transport messenger RNA",
+          "Neutralize metabolic poisons and break down fatty acid chains"
+        ],
+        "correct": "Help move organelles and support the cell's shape as part of the cytoskeleton"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Which animal cell organelle helps organize cell division during mitosis and is absent in plant cells?",
+        "options": [
+          "Centrioles",
+          "Peroxisomes",
+          "Vacuoles",
+          "Endosomes"
+        ],
+        "correct": "Centrioles"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What is the distinct metabolic function of peroxisomes?",
+        "options": [
+          "Break down fats and toxic substances like hydrogen peroxide",
+          "Synthesize polypeptide chains from mRNA transcripts",
+          "Sort and deliver endocytosed cargo to the plasma membrane",
+          "Store water, food, or metabolic waste products"
+        ],
+        "correct": "Break down fats and toxic substances like hydrogen peroxide"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What toxic substance is explicitly broken down by peroxisomal activity?",
+        "options": [
+          "Hydrogen peroxide",
+          "Lactic acid",
+          "Carbonic acid",
+          "Adenosine diphosphate"
+        ],
+        "correct": "Hydrogen peroxide"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What is the shared general function of cilia and flagella?",
+        "options": [
+          "Help the cell move or move things around the cell",
+          "Direct mitotic division by producing asters",
+          "Increase apical surface area for nutrient absorption",
+          "Synthesize lipids and detoxify intracellular chemicals"
+        ],
+        "correct": "Help the cell move or move things around the cell"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "How are cilia structurally distinguished from flagella based on their number and length?",
+        "options": [
+          "Cilia are short and many, whereas flagella are long and few",
+          "Cilia are long and single, whereas flagella are short and numerous",
+          "Cilia are branching tubules, whereas flagella are solid spheres",
+          "Cilia are non-motile folds, whereas flagella are strictly internal"
+        ],
+        "correct": "Cilia are short and many, whereas flagella are long and few"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Which of the following is an example of a flagellum in animal biology?",
+        "options": [
+          "Tail of a sperm cell",
+          "Intestinal brush border projection",
+          "Mitotic spindle fiber",
+          "Epithelial cilia of the trachea"
+        ],
+        "correct": "Tail of a sperm cell"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What is an endosome and what is its role in cellular dynamics?",
+        "options": [
+          "A small sac formed when the cell takes something in, helping sort and deliver materials",
+          "A permanent non-membranous organelle dedicated to cellular respiration",
+          "A large storage structure that maintains turgor pressure in plant tissues",
+          "A specialized region of chromatin that transcribes ribosomal RNA"
+        ],
+        "correct": "A small sac formed when the cell takes something in, helping sort and deliver materials"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What is the primary role of vacuoles in animal cells?",
+        "options": [
+          "Small storage sacs that hold water, food, or waste",
+          "Primary engines of ATP generation through glycolysis",
+          "Organizing centers for cytoplasmic microtubules during interphase",
+          "Sites of lipid synthesis and enzymatic detoxification"
+        ],
+        "correct": "Small storage sacs that hold water, food, or waste"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What is the morphological feature and primary function of microvilli?",
+        "options": [
+          "Tiny finger-like projections that increase the cell's surface area to absorb nutrients",
+          "Elongated whip-like appendages used for organismal locomotion",
+          "Enzyme-containing vesicles dedicated to destroying foreign pathogens",
+          "Protective multi-layered membranes that prevent cellular dehydration"
+        ],
+        "correct": "Tiny finger-like projections that increase the cell's surface area to absorb nutrients"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "In which anatomical location are microvilli predominantly seen in animals?",
+        "options": [
+          "Intestine lining",
+          "Cardiac muscle tissue",
+          "Central nervous system axons",
+          "Skeletal bone matrix"
+        ],
+        "correct": "Intestine lining"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Which set of structures represents organelles found in animal cells but typically NOT in plant cells?",
+        "options": [
+          "Centrioles, lysosomes, cilia/flagella, and microvilli",
+          "Mitochondria, rough ER, ribosomes, and peroxisomes",
+          "Nucleus, cytoplasm, vacuoles, and plasma membrane",
+          "Cytoskeleton, chromatin, Golgi apparatus, and endosomes"
+        ],
+        "correct": "Centrioles, lysosomes, cilia/flagella, and microvilli"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Why are cilia and flagella generally absent in plant cells compared to animal cells?",
+        "options": [
+          "Most plant cells do not move",
+          "Plant cells lack the ATP required to power molecular motors",
+          "Plant cells rely entirely on endosomes for physical displacement",
+          "Plant cell membranes cannot support proteinaceous structures"
+        ],
+        "correct": "Most plant cells do not move"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What does it mean that living systems display hierarchical levels of organization?",
+        "options": [
+          "Life is organized into increasing levels of complexity",
+          "All biological structures exist at the exact same physical scale",
+          "Organisms can bypass lower structural levels to form organ systems directly",
+          "Complexity decreases progressively as systems scale upward"
+        ],
+        "correct": "Life is organized into increasing levels of complexity"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "How are 'emergent properties' defined within biological hierarchies?",
+        "options": [
+          "Properties that arise when individual components interact within a larger system",
+          "Traits that belong exclusively to isolated atomic components",
+          "Waste molecules released during cellular metabolic breakdown",
+          "Structural defects caused by random genetic mutations"
+        ],
+        "correct": "Properties that arise when individual components interact within a larger system"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Which statement accurately captures the core principle of emergent properties?",
+        "options": [
+          "The whole is more than the sum of its parts",
+          "Individual components dictate all macroscopic behaviors independently",
+          "Biological systems operate solely through additive linear summation",
+          "Higher organizational levels possess fewer functions than lower levels"
+        ],
+        "correct": "The whole is more than the sum of its parts"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Are emergent properties present in the individual components of a system working in isolation?",
+        "options": [
+          "No, they are not properties of those individual components themselves",
+          "Yes, each component contains the full functional capacity of the whole system",
+          "Yes, but only when the components exist in an inorganic state",
+          "No, they appear exclusively at the subatomic particle level"
+        ],
+        "correct": "No, they are not properties of those individual components themselves"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Which of the following demonstrates the correct order of organization from lowest complexity to highest complexity?",
+        "options": [
+          "Atom → Molecule → Macromolecule → Cell → Tissue → Organ",
+          "Macromolecule → Molecule → Cell → Organ → Tissue → Organ System",
+          "Cell → Atom → Molecule → Tissue → Organ System → Organ",
+          "Tissue → Cell → Organ → Macromolecule → Organism → Biosphere"
+        ],
+        "correct": "Atom → Molecule → Macromolecule → Cell → Tissue → Organ"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Which sequence correctly traces biological organization from organ up to the biosphere?",
+        "options": [
+          "Organ → Organ System → Organism → Population → Community → Ecosystem → Biosphere",
+          "Organ → Organism → Organ System → Community → Population → Biosphere → Ecosystem",
+          "Organ System → Organ → Population → Organism → Ecosystem → Community → Biosphere",
+          "Organ → Organ System → Population → Organism → Community → Biosphere → Ecosystem"
+        ],
+        "correct": "Organ → Organ System → Organism → Population → Community → Ecosystem → Biosphere"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "How are the anatomical levels of a horse correctly organized in ascending order?",
+        "options": [
+          "Muscle cell → Muscle tissue → Heart (organ) → Organ system → Body systems of a horse",
+          "Muscle tissue → Muscle cell → Heart (organ) → Body systems of a horse → Organ system",
+          "Heart (organ) → Muscle tissue → Muscle cell → Organ system → Body systems of a horse",
+          "Muscle cell → Organ system → Muscle tissue → Heart (organ) → Body systems of a horse"
+        ],
+        "correct": "Muscle cell → Muscle tissue → Heart (organ) → Organ system → Body systems of a horse"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Why do all living things require energy?",
+        "options": [
+          "To fuel cellular activities, maintain structure, and support growth",
+          "To completely halt all intracellular chemical reactions",
+          "To prevent genetic material from encoding hereditary instructions",
+          "To eliminate the need for homeostatic physiological regulation"
+        ],
+        "correct": "To fuel cellular activities, maintain structure, and support growth"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What is the biological definition of metabolism?",
+        "options": [
+          "All the chemical reactions that occur within an organism to convert energy into usable forms, primarily ATP",
+          "The physical displacement of an organism through its external environment",
+          "The physiological process of halving chromosome numbers during gamete production",
+          "The detection and processing of environmental stimuli by the nervous system"
+        ],
+        "correct": "All the chemical reactions that occur within an organism to convert energy into usable forms, primarily ATP"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What is ATP often referred to as within cellular biology?",
+        "options": [
+          "The cell's currency of energy",
+          "The master genetic blueprint",
+          "The structural framework of tissues",
+          "The universal sorting compartment"
+        ],
+        "correct": "The cell's currency of energy"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What chemical sources provide the initial chemical energy input for metabolism?",
+        "options": [
+          "Carbohydrates, fats, proteins, and others",
+          "Pure nitrogen gas and carbon monoxide",
+          "Hydrolytic lysosomal enzymes",
+          "Inorganic minerals without organic bonds"
+        ],
+        "correct": "Carbohydrates, fats, proteins, and others"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What primary waste products and byproduct energy are released from metabolic processing?",
+        "options": [
+          "Chemical waste (carbon dioxide, water) and heat",
+          "Glucose and usable mechanical energy only",
+          "Hydrogen peroxide and nucleic acid fragments",
+          "Oxygen gas and condensation granules"
+        ],
+        "correct": "Chemical waste (carbon dioxide, water) and heat"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What type of chemical reaction synthesizes ATP from ADP, phosphate, and food energy?",
+        "options": [
+          "Condensation reaction",
+          "Hydrolysis reaction",
+          "Decarboxylation reaction",
+          "Oxidative cleavage reaction"
+        ],
+        "correct": "Condensation reaction"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What type of reaction breaks down ATP to release usable energy and phosphate?",
+        "options": [
+          "Hydrolysis reaction",
+          "Condensation reaction",
+          "Polymerization reaction",
+          "Dehydration synthesis"
+        ],
+        "correct": "Hydrolysis reaction"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What is the biological definition of homeostasis?",
+        "options": [
+          "The ability of a living organism to maintain a stable internal environment despite external changes",
+          "The irreversible increase in physical biomass over developmental stages",
+          "The process of passing genetic material to subsequent generations",
+          "The progressive adaptation of a population through natural selection"
+        ],
+        "correct": "The ability of a living organism to maintain a stable internal environment despite external changes"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Which of the following are explicit physiological examples of homeostasis?",
+        "options": [
+          "Constant body temperature in mammals, blood pH regulation, and cellular water balance",
+          "Mitotic spindle assembly, cytokinesis, and nuclear envelope breakdown",
+          "Flagellar beating, cytoplasmic streaming, and muscle contraction",
+          "Natural selection, allele frequency shifting, and speciation"
+        ],
+        "correct": "Constant body temperature in mammals, blood pH regulation, and cellular water balance"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "How do dogs physiologically demonstrate homeostasis when overheated?",
+        "options": [
+          "Dogs pant to regulate body temperature",
+          "Dogs enter a nocturnal hibernation state",
+          "Dogs increase microvilli length to absorb water",
+          "Dogs undergo rapid cellular differentiation"
+        ],
+        "correct": "Dogs pant to regulate body temperature"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "How do fish maintain cellular homeostasis in aquatic environments?",
+        "options": [
+          "By maintaining salt and water balance in their cells",
+          "By undergoing continuous post-embryonic metamorphosis",
+          "By halting cellular metabolism during fluctuations",
+          "By replacing plasma membranes with rigid barriers"
+        ],
+        "correct": "By maintaining salt and water balance in their cells"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What is the fundamental purpose of reproduction in living organisms?",
+        "options": [
+          "Ability to pass genetic information and continue the species",
+          "Direct absorption of nutrients via apical microvilli",
+          "Maintenance of constant somatic core body temperature",
+          "Neutralization of toxic hydrogen peroxide byproducts"
+        ],
+        "correct": "Ability to pass genetic information and continue the species"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What are the two distinct biological tiers at which reproduction occurs?",
+        "options": [
+          "Cellular level and organismal level",
+          "Atomic level and molecular level",
+          "Organ level and biosphere level",
+          "Tissue level and systemic level"
+        ],
+        "correct": "Cellular level and organismal level"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What are the two forms of reproduction occurring at the cellular level?",
+        "options": [
+          "Mitosis vs. Meiosis",
+          "Asexual vs. Sexual",
+          "Hydrolysis vs. Condensation",
+          "Budding vs. Binary fission"
+        ],
+        "correct": "Mitosis vs. Meiosis"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What is the biological definition of mitosis?",
+        "options": [
+          "A process of cell duplication during which one cell gives rise to two genetically identical daughter cells",
+          "A specialized reduction division producing four genetically distinct haploid gametes",
+          "The fusion of male and female haploid nuclei during fertilization",
+          "The structural transformation of somatic tissue during metamorphosis"
+        ],
+        "correct": "A process of cell duplication during which one cell gives rise to two genetically identical daughter cells"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Strictly applied, what specific cellular event is the term mitosis used to describe?",
+        "options": [
+          "The duplication and distribution of chromosomes",
+          "The synthesis of fats in the smooth endoplasmic reticulum",
+          "The degradation of old organelles inside lysosomes",
+          "The condensation of ADP and phosphate into ATP"
+        ],
+        "correct": "The duplication and distribution of chromosomes"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What is the ploidy and yield of daughter cells following mitotic division of a diploid cell?",
+        "options": [
+          "Two diploid cells",
+          "Four haploid cells",
+          "Two haploid cells",
+          "Four diploid cells"
+        ],
+        "correct": "Two diploid cells"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What is the biological definition of meiosis?",
+        "options": [
+          "A specialized type of cell division that reduces chromosome number by half, creating four haploid cells",
+          "A process of cell duplication yielding two genetically identical diploid cells",
+          "The non-reductional division of somatic tissues for physical growth",
+          "The vegetative cloning of parent organisms without genetic variation"
+        ],
+        "correct": "A specialized type of cell division that reduces chromosome number by half, creating four haploid cells"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "How do the daughter cells produced by meiosis compare genetically to the parent cell?",
+        "options": [
+          "Each is genetically distinct from the parent cell that gave rise to them",
+          "Each is an exact genetic clone of the parent cell",
+          "They are identical to the parent cell but contain twice the chromosomes",
+          "They lack genetic material entirely until fertilization occurs"
+        ],
+        "correct": "Each is genetically distinct from the parent cell that gave rise to them"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What are the two primary modes of reproduction at the organismal level?",
+        "options": [
+          "Asexual vs. Sexual",
+          "Mitosis vs. Meiosis",
+          "Condensation vs. Hydrolysis",
+          "Locomotion vs. Circulation"
+        ],
+        "correct": "Asexual vs. Sexual"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Which organisms illustrate asexual reproduction?",
+        "options": [
+          "Unicellular organisms, Hydras, and sweet potatoes",
+          "Humans, dogs, and horses exclusively",
+          "Birds and reptiles undergoing internal fertilization",
+          "Amphibians producing haploid gametic clutches"
+        ],
+        "correct": "Unicellular organisms, Hydras, and sweet potatoes"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What ploidy transitions occur during sexual reproduction in humans?",
+        "options": [
+          "Diploid parents (2n) produce haploid gametes (n) that fertilize to form a diploid zygote (2n)",
+          "Haploid parents (n) produce diploid gametes (2n) that form a haploid offspring (n)",
+          "Diploid parents (2n) divide mitotically to directly produce a diploid offspring (2n) without gametes",
+          "Triploid parents (3n) undergo reduction division to generate diploid gametes (2n)"
+        ],
+        "correct": "Diploid parents (2n) produce haploid gametes (n) that fertilize to form a diploid zygote (2n)"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "How is 'growth' defined in the context of living organisms?",
+        "options": [
+          "Increase in size",
+          "Change in structure and function",
+          "Drastic transformation in body plan",
+          "Cellular differentiation into tissues"
+        ],
+        "correct": "Increase in size"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "How is 'development' defined in living systems?",
+        "options": [
+          "Change in structure and function",
+          "Simple quantitative increase in physical size",
+          "Locomotion from one habitat to another",
+          "Reversible regulation of core body temperature"
+        ],
+        "correct": "Change in structure and function"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What biological processes occur during an organism's life cycle?",
+        "options": [
+          "Cellular differentiation and the formation of tissues and organs",
+          "Complete cessation of metabolism during vegetative growth",
+          "Conversion of all eukaryotic organelles into prokaryotic forms",
+          "Direct degradation of somatic genetic instructions"
+        ],
+        "correct": "Cellular differentiation and the formation of tissues and organs"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What is metamorphosis in animal biology?",
+        "options": [
+          "A drastic transformation in body structure and form",
+          "The normal mitotic repair of epithelial tissue",
+          "The maintaining of constant blood pH levels",
+          "The condensation of ADP into ATP"
+        ],
+        "correct": "A drastic transformation in body structure and form"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "In what molecular forms is the universal genetic code stored?",
+        "options": [
+          "DNA (Deoxyribonucleic Acid) and RNA (Ribonucleic Acid)",
+          "ATP (Adenosine Triphosphate) and ADP (Adenosine Diphosphate)",
+          "Phospholipids and structural carbohydrates",
+          "Hydrolytic enzymes and peroxisomal catalases"
+        ],
+        "correct": "DNA (Deoxyribonucleic Acid) and RNA (Ribonucleic Acid)"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What constitutes the genetic code at the molecular level?",
+        "options": [
+          "Sequences of nucleotides",
+          "Chains of saturated fatty acids",
+          "Arrangements of microtubule triplets",
+          "Concentrations of atmospheric oxygen"
+        ],
+        "correct": "Sequences of nucleotides"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Which five nucleotides comprise the universal genetic code across DNA and RNA?",
+        "options": [
+          "Adenine, Thymine, Cytosine, Guanine, and Uracil",
+          "Adenosine, Phosphate, Ribose, Deoxyribose, and Glucose",
+          "Alanine, Cysteine, Glycine, Proline, and Serine",
+          "Chromatin, Nucleolus, Histone, Centromere, and Telomere"
+        ],
+        "correct": "Adenine, Thymine, Cytosine, Guanine, and Uracil"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What is the structural architecture of a DNA molecule?",
+        "options": [
+          "A double helix with base pairs and a helix of sugar-phosphates",
+          "A single-stranded ribose polymer with folded loops",
+          "A globular enzyme complex containing bound phosphate groups",
+          "A lipid bilayer embedded with integral transport proteins"
+        ],
+        "correct": "A double helix with base pairs and a helix of sugar-phosphates"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Which nucleobases belong specifically to DNA?",
+        "options": [
+          "Thymine, Cytosine, Adenine, and Guanine",
+          "Uracil, Cytosine, Adenine, and Guanine",
+          "Thymine, Uracil, Cytosine, and Adenine",
+          "Adenine, Guanine, Phosphate, and Ribose"
+        ],
+        "correct": "Thymine, Cytosine, Adenine, and Guanine"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What is the primary structural conformation of an RNA molecule?",
+        "options": [
+          "A single strand containing nucleobases",
+          "A double-stranded complementary antiparallel helix",
+          "A triple-helical proteinaceous fibrous lattice",
+          "A circular closed-ring lipid configuration"
+        ],
+        "correct": "A single strand containing nucleobases"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Which nucleobases belong specifically to RNA?",
+        "options": [
+          "Uracil, Cytosine, Adenine, and Guanine",
+          "Thymine, Cytosine, Adenine, and Guanine",
+          "Thymine, Uracil, Guanine, and Cytosine",
+          "Adenine, Cytosine, Guanine, and Deoxyribose"
+        ],
+        "correct": "Uracil, Cytosine, Adenine, and Guanine"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What is the biological definition of 'irritability' in living organisms?",
+        "options": [
+          "The ability of organisms to detect and respond to stimuli",
+          "The capacity to synthesize cellular ATP via condensation",
+          "The progressive increase in body mass over time",
+          "The maintenance of a constant internal osmolarity"
+        ],
+        "correct": "The ability of organisms to detect and respond to stimuli"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What is the adaptive purpose of irritability in animals?",
+        "options": [
+          "Helps organisms survive and thrive in changing conditions",
+          "Ensures exact cloning of somatic chromosomes",
+          "Provides mechanical energy for muscle contraction",
+          "Eliminates metabolic waste products from the blood"
+        ],
+        "correct": "Helps organisms survive and thrive in changing conditions"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Which environmental factors are classified as climatic stimuli?",
+        "options": [
+          "Temperature, humidity, radiation, photoperiod, and air movement",
+          "Constraint facility and topography",
+          "Nutrients and chemical toxins",
+          "Parasites, pathogens, and predators"
+        ],
+        "correct": "Temperature, humidity, radiation, photoperiod, and air movement"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Which environmental factors are classified as physical stimuli?",
+        "options": [
+          "Constraint facility and topography",
+          "Temperature, humidity, and radiation",
+          "Nutrients, chemical ions, and toxins",
+          "Pathogenic bacteria and predatory animals"
+        ],
+        "correct": "Constraint facility and topography"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Which environmental factors are classified as chemical stimuli?",
+        "options": [
+          "Nutrients and toxins",
+          "Topography and physical constraints",
+          "Relative humidity and photoperiod",
+          "Predators and biological parasites"
+        ],
+        "correct": "Nutrients and toxins"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Which environmental factors are classified as biological stimuli?",
+        "options": [
+          "Parasites, pathogens, and predators",
+          "Temperature, humidity, and radiation",
+          "Constraint facility and terrain topography",
+          "Nutrient concentrations and dissolved toxins"
+        ],
+        "correct": "Parasites, pathogens, and predators"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Which neural structures process and coordinate incoming stimuli in animals?",
+        "options": [
+          "Central Nervous System and Autonomic Nervous System",
+          "Endoplasmic Reticulum and Golgi Apparatus",
+          "Microtubules and Microvilli complexes",
+          "Lysosomal digestive networks"
+        ],
+        "correct": "Central Nervous System and Autonomic Nervous System"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "How is movement characterized as a fundamental feature of life?",
+        "options": [
+          "Movements are not random—they are organized, controlled, and often precise",
+          "Movement occurs only externally through environmental locomotion",
+          "Movement is restricted entirely to multicellular organisms with limbs",
+          "Movement consists of completely uncoordinated Brownian motion"
+        ],
+        "correct": "Movements are not random—they are organized, controlled, and often precise"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What is external movement in animals?",
+        "options": [
+          "Locomotion (such as walking and swimming)",
+          "Circulation of blood through blood vessels",
+          "Movement of cytoplasm within somatic cells",
+          "Migration of individual leukocytes across membranes"
+        ],
+        "correct": "Locomotion (such as walking and swimming)"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What activities constitute internal movement in living organisms?",
+        "options": [
+          "Circulation of blood, movement of cytoplasm, and migration of cells",
+          "Organismal locomotion, flight, and running",
+          "Physical avoidance of geographic barriers",
+          "Drastic morphological change during metamorphosis"
+        ],
+        "correct": "Circulation of blood, movement of cytoplasm, and migration of cells"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Why do populations of living organisms evolve over time?",
+        "options": [
+          "Due to genetic changes in populations",
+          "Because individual organisms alter their genes during their lifetime",
+          "Due to the direct breakdown of cellular ATP into ADP",
+          "Because homeostasis forces external environmental conditions to remain static"
+        ],
+        "correct": "Due to genetic changes in populations"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What is the key mechanism driving evolutionary change across populations?",
+        "options": [
+          "Natural selection, where individuals with traits better suited to the environment survive and reproduce",
+          "Mitotic duplication ensuring all offspring are identical clones",
+          "Metabolic condensation reactions producing excess heat",
+          "Irritability reflexes mediated by the autonomic nervous system"
+        ],
+        "correct": "Natural selection, where individuals with traits better suited to the environment survive and reproduce"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "What fundamental biological reality does evolution explain?",
+        "options": [
+          "Both the diversity and unity of life",
+          "Exclusively the morphology of animal cell organelles",
+          "The chemical pathway of ATP hydrolysis during exercise",
+          "The absolute non-changing state of somatic genomes"
+        ],
+        "correct": "Both the diversity and unity of life"
+      },
+      {
+        "subject": "BBIO102A",
+        "question": "Do unicellular organisms grow and reproduce?",
+        "options": [
+          "Yes, all living organisms grow and reproduce, regardless of how many cells they contain",
+          "No, only multicellular organisms have the capacity to grow and reproduce",
+          "No, unicellular organisms only maintain homeostasis without reproducing",
+          "Yes, but they grow without utilizing metabolic energy or ATP"
+        ],
+        "correct": "Yes, all living organisms grow and reproduce, regardless of how many cells they contain"
+      },
       // GENERAL BOTANY
       {
         subject: "General Botany",
